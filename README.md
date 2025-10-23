@@ -43,3 +43,18 @@ inhibit_rules:
     target_match:
       severity: 'warning'
     equal: ['alertname']
+```
+---
+## 🚀 Инструкции по запуску и интеграции с Prometheus
+
+1. Скачать и установить [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/)
+2. Разместить конфигурационный файл */etc/alertmanager/alertmanager.yml*
+3. Запуск Alertmanager ***./alertmanager --config.file=/etc/alertmanager/alertmanager.yml***
+4. Интеграция с Prometheus - в ***prometheus.yml*** добавьте:
+```
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: ['localhost:9093']
+```
+5. Проверка работы - перейдите на ***http://localhost:9093*** чтобы увидеть интерфейс Alertmanager.
