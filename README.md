@@ -48,7 +48,7 @@ inhibit_rules:
 ## 🚀 Инструкции по запуску и интеграции с Prometheus
 
 1. Скачать и установить [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/)
-2. Разместить конфигурационный файл */etc/alertmanager/alertmanager.yml*
+2. Разместить конфигурационный файл ***/etc/alertmanager/alertmanager.yml***
 3. Запуск Alertmanager ***./alertmanager --config.file=/etc/alertmanager/alertmanager.yml***
 4. Интеграция с Prometheus - в ***prometheus.yml*** добавьте:
 ```
